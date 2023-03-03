@@ -13,7 +13,7 @@ const App = () => {
       <NavBar/>
 
       <ItemListContainer 
-      saludo = {"Bienvenidos a Electro Guepard"}
+      greeting = {"Bienvenidos a Electro Guepard"}
       />
 
     </ChakraProvider>
