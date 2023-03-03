@@ -7,9 +7,7 @@ const App = () => {
   return (
     <>
     <ChakraProvider>
-      <h1> 
-        <strong> GUEPARD </strong>
-      </h1>
+      
       <NavBar/>
 
       <ItemListContainer 

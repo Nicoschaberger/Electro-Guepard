@@ -1,8 +1,13 @@
+import { Center, Square, Circle } from '@chakra-ui/react'
 
 const ItemListContainer = ({greeting}) => {
   return (
     <>
-    <h1>{greeting}</h1>
+      <Center h='100px' >
+        <h1>
+          <strong>{greeting}</strong>
+        </h1>
+      </Center>    
     </>
   )
 }
