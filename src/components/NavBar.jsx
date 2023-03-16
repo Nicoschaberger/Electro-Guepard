@@ -29,11 +29,9 @@ const NavBar = () => {
       Categorias
     </MenuButton>
     <MenuList>
-      <MenuItem>Cocina</MenuItem>
-      <MenuItem>Televisores</MenuItem>
-      <MenuItem>Hogar</MenuItem>
-      <MenuItem>Informatica</MenuItem>
-      <MenuItem>Musica</MenuItem>
+      <MenuItem>Remeras</MenuItem>
+      <MenuItem>Buzos</MenuItem>
+      <MenuItem>Musculozas</MenuItem>
     </MenuList>
   </Menu>  
     <Spacer />
@@ -45,20 +43,6 @@ const NavBar = () => {
    )
 }
 
-{/* <Flex>
-  <Box>
-   
-    </>
-  </Box>
-  <Spacer />
-  <Box p='4'>
-  
-  </Box>
-  <Spacer />
-  <Box p='4'>
-    
-  </Box>
-</Flex> */}
 
 
 

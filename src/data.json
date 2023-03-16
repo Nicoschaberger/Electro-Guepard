@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "nombre": "microondas", 
+        "precio":2000,
+        "descripcion": "descripcion A",
+        "stock": 20
+    },
+    {
+        "ID": 2,
+        "nombre": "televisores 4K",
+        "precio": 40000,
+        "descripcion": "descripcion B",
+        "stock": 10
+    },
+    {
+        "id": 3,
+        "nombre": "porta vasos",
+        "pecio": 200,
+        "descripcion": "descripcion C",
+        "stock": 35
+    },
+    {
+        "id": 4,
+        "nombre": "Lapto",
+        "pecio": 95000,
+        "descripcion": "descripcion D",
+        "stock": 16
+
+    },
+    {
+        "id": 5,
+        "nombre": "Parlante",
+        "pecio": 20000,
+        "descripcion": "descripcion E",
+        "stock": 25
+    }
+]
