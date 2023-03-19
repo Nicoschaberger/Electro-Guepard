@@ -1,6 +1,5 @@
 import React from 'react'
 import { Card, CardHeader, CardBody, CardFooter, Button, Stack } from '@chakra-ui/react'
-import { Link } from "react-router-dom"
 import ItemCount from './ItemCount'
 
 
