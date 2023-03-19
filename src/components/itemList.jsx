@@ -1,5 +1,5 @@
 import { Container } from "@chakra-ui/react";
-import item from "./item";
+import Item from "./Item";
 
 
 const itemList = ({ categorias }) => {
@@ -7,15 +7,15 @@ const itemList = ({ categorias }) => {
     <>
     <Container className="main-catalogue">
         {categorias?.map((cat) => (
-            <item
+            <Item
             key={cat.id}
+            imagen={cat.imagen}
             id={cat.id}
             nombre={cat.nombre}
             descripcion= {cat.descripcion}
             precio={cat.precio}
             stock={cat.precio}
             categoria={cat.categorias}
-            imagen={cat.imagen}
             />
             ))
         }

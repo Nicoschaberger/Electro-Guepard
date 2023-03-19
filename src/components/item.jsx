@@ -1,7 +1,7 @@
 import { Card, CardHeader, CardBody, CardFooter, Button, Stack } from '@chakra-ui/react'
 import { Link } from "react-router-dom"
 
-const item = ({nombre, descripcion}) => {
+const item = ({imagen, nombre, descripcion}) => {
   return (
     <>
     <div key={id}>

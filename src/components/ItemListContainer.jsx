@@ -1,5 +1,5 @@
 import { Center, Square, Circle } from '@chakra-ui/react'
-import itemList from './itemList'
+import ItemList from './ItemList'
 
 const ItemListContainer = ({greeting}) => {
   return (
@@ -9,7 +9,7 @@ const ItemListContainer = ({greeting}) => {
           <strong>{greeting}</strong>
         </h1>
       </Center>
-      <itemList/>  
+      <ItemList/>  
     </>
   )
 }

@@ -2,7 +2,7 @@ import ItemListContainer from "./components/ItemListContainer"
 import NavBar from "./components/NavBar"
 import { ChakraProvider } from '@chakra-ui/react'
 import Data from "./data.json"
-import itemDatailContainer from "./components/itemDetailContainer"
+import ItemDatailContainer from "./components/ItemDetailContainer"
 
 
 const App = () => {
@@ -41,7 +41,7 @@ const App = () => {
       greeting = {"Bienvenidos a Electro Guepard"}
       />
       
-      <itemDatailContainer/>
+      <ItemDatailContainer/>
       
 
     </ChakraProvider>

@@ -1,9 +1,9 @@
-import itemDatail from "./itemDatail"
+import ItemDatail from "./ItemDatail"
 
 const itemDetailContainer = () => {
   return (
     <div>
-        <itemDatail/>
+        <ItemDatail/>
     </div>
   )
 }

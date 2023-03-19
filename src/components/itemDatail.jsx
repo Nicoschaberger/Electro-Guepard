@@ -1,7 +1,8 @@
 import React from 'react'
 import { Card, CardHeader, CardBody, CardFooter, Button, Stack } from '@chakra-ui/react'
 import { Link } from "react-router-dom"
-import itemCount from './itemCount'
+import ItemCount from './ItemCount'
+
 
 const itemDatail = ({id, imagen, nombre, precio, descripcion, stock}) => {
   return (
@@ -20,7 +21,7 @@ const itemDatail = ({id, imagen, nombre, precio, descripcion, stock}) => {
     <Divider />
         <CardFooter>
             <ButtonGroup spacing='2'>
-                <itemCount/>
+                <ItemCount/>
                 <Button variant='solid' colorScheme='blue'> Comprar ahora! </Button>
                 <Button variant='solid' colorScheme='blue'> Agregar al carrito </Button>
             </ButtonGroup>
