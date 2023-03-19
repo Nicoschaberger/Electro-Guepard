@@ -1,5 +1,5 @@
-import item from "./item";
 import { Container } from "@chakra-ui/react";
+import item from "./item";
 
 
 const itemList = ({ categorias }) => {
@@ -20,6 +20,7 @@ const itemList = ({ categorias }) => {
             ))
         }
     </Container>
+    
     
   
     </>
