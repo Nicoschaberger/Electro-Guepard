@@ -1,7 +1,7 @@
 import ItemListContainer from "./components/ItemListContainer"
 import NavBar from "./components/NavBar"
 import { ChakraProvider } from '@chakra-ui/react'
-import Data from "./data.json"
+import Data from "./Data.json"
 import ItemDatailContainer from "./components/ItemDetailContainer"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Cart from "./components/Cart"
@@ -37,11 +37,13 @@ const App = () => {
     <ChakraProvider>
       
       <NavBar/>
+
+    
       
       <Routes>
 
-      <Route exact path="/" Element={<ItemListContainer/>} greeting = {"Bienvenidos a Electro Guepard"}  />      
-      <Route exact path="/Inicio" Element={<ItemDatailContainer/>}/>
+      <Route exact path="/Inicio" Element={<ItemListContainer greeting = {"Bienvenidos a Electro Guepard"}/>} />       
+      <Route exact path="/Descripcion" Element={<ItemDatailContainer/>}/>
       <Route exact path="/Cart" element={<Cart/>}/>
       
       </Routes>

@@ -19,8 +19,7 @@ const itemList = ({ categorias }) => {
             />
             ))
         }
-    </Container>
-    
+    </Container>   
     
   
     </>
