@@ -32,7 +32,7 @@ const NavBar = () => {
     <MenuList>
       <MenuItem>Cocina</MenuItem>
       <MenuItem>Televisores</MenuItem>
-      <MenuItem>Deco</MenuItem>
+      <MenuItem>Home</MenuItem>
       <MenuItem>Informatica</MenuItem>
       <MenuItem>Musica</MenuItem>
     </MenuList>

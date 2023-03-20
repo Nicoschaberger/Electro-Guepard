@@ -1,8 +1,8 @@
-import { Card, CardHeader, CardBody, CardFooter, Button, Stack } from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, CardFooter, Button, Stack, Heading, Divider, ButtonGroup } from '@chakra-ui/react'
 import { Link } from 'react-router-dom';
 
 
-const item = ({imagen, nombre, descripcion}) => {
+const item = ({id, imagen, nombre, descripcion}) => {
   return (
     <>
     <div key={id}>
@@ -17,7 +17,7 @@ const item = ({imagen, nombre, descripcion}) => {
         <CardFooter>
             <ButtonGroup spacing='2'>
                 <Button variant='solid' colorScheme='blue'> Comprar ahora! </Button>
-                <Link to="/Descripcion">
+                <Link to="/item/:id">
                 <Button variant='ghost' colorScheme='blue'>  Descripcion: {descripcion} </Button>
                 </Link>
             </ButtonGroup>
