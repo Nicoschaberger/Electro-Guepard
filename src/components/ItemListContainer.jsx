@@ -1,7 +1,9 @@
 import { Center, Square, Circle } from '@chakra-ui/react'
 import ItemList from './ItemList'
+import { useState } from 'react'
 
 const ItemListContainer = ({greeting}) => {
+  const [dato, setDato] = useState([])
 
  const datos = [
     {
@@ -75,14 +77,15 @@ async function fetchingData(){
 }
 fetchingData();
 
-  return (
-    <>
+
+return (
+  <>
       <Center h='100px' >
         <h1>
           <strong>{greeting}</strong>
         </h1>
       </Center>
-      <ItemList key={dat.id} datos={datos}/>  
+      <ItemList datos={datos}/>  
     </>
   )
 }

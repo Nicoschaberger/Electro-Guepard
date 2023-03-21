@@ -3,11 +3,12 @@ import Item from "./Item";
 
 
 
-const itemList = ({datos}) => {
+
+const itemList = ( {datos} ) => {
   return (
     <>
     <Container className="main-catalogue">
-        {datos?.map((dat) => (
+        {datos.map((dat) => (
             <Item
             key={dat.id}
             imagen={dat.imagen}
