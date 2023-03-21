@@ -9,7 +9,6 @@ const itemDatail = ({id, imagen, nombre, precio, descripcion, stock}) => {
         <div key={id}>
         <Card maxW='sm'>
         <CardBody>
-            <Image borderRadius='lg' src={imagen} />
             <Stack mt='6' spacing='3'>
                 <Heading size='md'>{nombre}</Heading>
                 <Text> Descripcion: {descripcion} </Text>

@@ -6,20 +6,19 @@ const item = ({id, imagen, nombre, descripcion, precio, stock, categoria}) => {
   return (
     <>
     <div key={id}>
-    <Card maxW='sm'>
+    <Card className='carta' maxW='sm'>
         <CardBody>
-            <Image borderRadius='lg' src={imagen} />
             <Stack mt='6' spacing='3'>
-                <Heading size='md'>{nombre}</Heading>
+                <Heading className='name' size='md'>{nombre}</Heading>
             </Stack>
         </CardBody>
     <Divider />
         <CardFooter>
-            <ButtonGroup spacing='2'>
+            <ButtonGroup className='botones' spacing='2'>
                 <Button variant='solid' colorScheme='blue'> Comprar ahora! </Button>
-                <Link to="/item/:id">
-                <Button variant='ghost' colorScheme='blue'>  Descripcion: {descripcion} </Button>
-                </Link>
+                <Button variant='ghost' colorScheme='blue'>
+                <Link to={`/item/${id}`}> Descripcion</Link>
+                </Button>
             </ButtonGroup>
         </CardFooter>
     </Card>

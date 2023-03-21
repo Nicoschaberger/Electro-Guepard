@@ -11,3 +11,15 @@
   border-radius: 90%;
   width: 13%;
 }
+
+.name{
+  text-align: center;
+}
+
+.button{
+  text-align: center;
+}
+
+.card{
+  display: block
+}
