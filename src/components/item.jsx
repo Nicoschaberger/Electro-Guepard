@@ -15,9 +15,11 @@ const item = ({id, imagen, nombre, descripcion, precio, stock, categoria}) => {
     <Divider />
         <CardFooter>
             <ButtonGroup className='botones' spacing='2'>
+                <Link to="/Cart">
                 <Button variant='solid' colorScheme='blue'> Comprar ahora! </Button>
+                </Link>
                 <Button variant='ghost' colorScheme='blue'>
-                <Link to={`/item/${id}`}> Descripcion</Link>
+                <Link to={`/Item/${id}`}> Descripcion </Link>
                 </Button>
             </ButtonGroup>
         </CardFooter>

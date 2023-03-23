@@ -1,11 +1,19 @@
 import React from 'react'
 import { Card, CardHeader, CardBody, CardFooter, Button, Stack } from '@chakra-ui/react'
 import ItemCount from './ItemCount'
+import { useParams } from 'react-router-dom'
+import { useState } from 'react'
 
 
-const itemDatail = ({id, imagen, nombre, precio, descripcion, stock}) => {
+const itemDatail = ( {datos} ) => {
+    const { id }= useParams();
+    const [productos, setProductos] = useState([])
+
+    const datoFilter = datos.filter((dato) => dato.id == id);
+
   return (
     <>
+        {datoFilter.map((dato) =>
         <div key={id}>
         <Card maxW='sm'>
         <CardBody>
@@ -20,12 +28,12 @@ const itemDatail = ({id, imagen, nombre, precio, descripcion, stock}) => {
         <CardFooter>
             <ButtonGroup spacing='2'>
                 <ItemCount/>
-                <Button variant='solid' colorScheme='blue'> Comprar ahora! </Button>
                 <Button variant='solid' colorScheme='blue'> Agregar al carrito </Button>
             </ButtonGroup>
         </CardFooter>
         </Card>
         </div>
+        )};
     </>
     )
 }

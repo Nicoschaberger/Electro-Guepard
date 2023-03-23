@@ -30,17 +30,27 @@ const NavBar = () => {
       Categorias
     </MenuButton>
     <MenuList>
-      <MenuItem>Cocina</MenuItem>
-      <MenuItem>Televisores</MenuItem>
-      <MenuItem>Home</MenuItem>
-      <MenuItem>Informatica</MenuItem>
-      <MenuItem>Musica</MenuItem>
+      <Link to={`/categoria/${"Cocina"}`}>
+        <MenuItem>Cocina</MenuItem>
+      </Link>
+      <Link to={`/categoria/${"Televisores"}`}>
+        <MenuItem>Televisores</MenuItem>
+      </Link>
+      <Link to={`/categoria/${"Home"}`}>
+        <MenuItem>Home</MenuItem>
+      </Link>
+      <Link to={`/categoria/${"Informatica"}`}>
+        <MenuItem>Informatica</MenuItem>
+      </Link>
+      <Link to={`/categoria/${"Musica"}`}>
+        <MenuItem>Musica</MenuItem>
+      </Link>
     </MenuList>
   </Menu>  
     <Spacer />
     <Box p='10'/>
     <Link to= {"/cart"}>
-    <CartWidget/>
+      <CartWidget/>
     </Link>
   </Flex>
     </Box>
