@@ -19,7 +19,7 @@ const item = ({id, imagen, nombre, descripcion, precio, stock, categoria}) => {
                 <Button variant='solid' colorScheme='blue'> Comprar ahora! </Button>
                 </Link>
                 <Button variant='ghost' colorScheme='blue'>
-                <Link to={`/Item/${id}`}> Descripcion </Link>
+                <Link to="/Item/:id"> Descripcion </Link>
                 </Button>
             </ButtonGroup>
         </CardFooter>

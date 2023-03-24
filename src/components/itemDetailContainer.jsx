@@ -6,10 +6,10 @@ const itemDetailContainer = () => {
   const { categoria } = useParams();
   console.log(categoria);
 
-  const datFilter = datos.filter((dato) => dato.categoria === categoria)
+
   return (
     <div>
-        <ItemDatail datos={datos}/>
+        <ItemDatail/>
     </div>
   )
 }

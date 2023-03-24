@@ -22,7 +22,9 @@ const NavBar = () => {
     <Box p='6'>  
   <Flex>
     <Box />
+    <Link to={"/"}>
     <img id="logo" src="./img/3.png" alt="logo" />
+    </Link>
     <Spacer />
     <Box  p='1'/>
     <Menu>

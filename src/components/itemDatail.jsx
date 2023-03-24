@@ -5,9 +5,9 @@ import { useParams } from 'react-router-dom'
 import { useState } from 'react'
 
 
-const itemDatail = ( {datos} ) => {
+const ItemDatail = () => {
     const { id }= useParams();
-    const [productos, setProductos] = useState([])
+    const [datos, setDatos] = useState([])
 
     const datoFilter = datos.filter((dato) => dato.id == id);
 
@@ -38,4 +38,4 @@ const itemDatail = ( {datos} ) => {
     )
 }
 
-export default itemDatail
+export default ItemDatail
