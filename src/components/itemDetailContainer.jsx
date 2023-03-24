@@ -1,17 +1,21 @@
 import ItemDatail from "./ItemDatail"
-import { useState } from "react"
 import { useParams } from "react-router-dom"
+import { useEffect, useState } from "react";
 
-const itemDetailContainer = () => {
-  const { categoria } = useParams();
-  console.log(categoria);
+const ItemDetailContainer = () => {
+  const { id } = useParams();
+  const [item, setItem] = useState({})
 
+  useEffect(() => {
+  },[item])
 
+  id = datos.find((dato) => dato.id === id)
+  
   return (
     <div>
-        <ItemDatail/>
+        <ItemDatail nombre={item.nombre} descripcion={item.descripcion} precio={item.precio} stock={item.stock} id={item.id}/>
     </div>
   )
 }
 
-export default itemDetailContainer
+export default ItemDetailContainer

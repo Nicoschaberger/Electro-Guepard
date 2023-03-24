@@ -28,7 +28,7 @@ const NavBar = () => {
     <Spacer />
     <Box  p='1'/>
     <Menu>
-    <MenuButton as={Button}>
+    <MenuButton as={Button} className="main">
       Categorias
     </MenuButton>
     <MenuList>

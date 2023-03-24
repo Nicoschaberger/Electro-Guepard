@@ -3,18 +3,13 @@ import { Card, CardHeader, CardBody, CardFooter, Button, Stack } from '@chakra-u
 import ItemCount from './ItemCount'
 import { useParams } from 'react-router-dom'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 
-const ItemDatail = () => {
-    const { id }= useParams();
-    const [datos, setDatos] = useState([])
-
-    const datoFilter = datos.filter((dato) => dato.id == id);
+const ItemDatail = (nombre, descripcion, precio, stock, datos) => {   
 
   return (
     <>
-        {datoFilter.map((dato) =>
-        <div key={id}>
         <Card maxW='sm'>
         <CardBody>
             <Stack mt='6' spacing='3'>
@@ -27,15 +22,15 @@ const ItemDatail = () => {
     <Divider />
         <CardFooter>
             <ButtonGroup spacing='2'>
-                <ItemCount/>
+                <Link to="/Cart">
                 <Button variant='solid' colorScheme='blue'> Agregar al carrito </Button>
+                <ItemCount/>
+                </Link>
             </ButtonGroup>
         </CardFooter>
         </Card>
-        </div>
-        )};
     </>
-    )
-}
+    )}
+
 
 export default ItemDatail

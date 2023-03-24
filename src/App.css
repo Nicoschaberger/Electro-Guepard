@@ -9,7 +9,16 @@
 #logo{
   border: 1px solid black;
   border-radius: 90%;
-  width: 13%;
+  width: 35%;
+}
+
+.carta{
+  display: flex;
+  flex-direction: row;
+}
+
+.main{
+  margin-right: 20%;
 }
 
 .name{

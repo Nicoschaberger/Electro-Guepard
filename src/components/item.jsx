@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 const item = ({id, imagen, nombre, descripcion, precio, stock, categoria}) => {
   return (
     <>
-    <div key={id}>
-    <Card className='carta' maxW='sm'>
+    <div key={id}  className='carta'>
+    <Card maxW='sm'>
         <CardBody>
             <Stack mt='6' spacing='3'>
                 <Heading className='name' size='md'>{nombre}</Heading>
@@ -19,7 +19,7 @@ const item = ({id, imagen, nombre, descripcion, precio, stock, categoria}) => {
                 <Button variant='solid' colorScheme='blue'> Comprar ahora! </Button>
                 </Link>
                 <Button variant='ghost' colorScheme='blue'>
-                <Link to="/Item/:id"> Descripcion </Link>
+                <Link to={`/Item/${id}`}> Descripcion </Link>
                 </Button>
             </ButtonGroup>
         </CardFooter>

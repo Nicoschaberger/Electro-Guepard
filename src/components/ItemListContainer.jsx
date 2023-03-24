@@ -43,7 +43,7 @@ const ItemListContainer = ({ greeting }) => {
     },
     {
       id: 4,
-      nombre: "Lapto",
+      nombre: "Laptop",
       imagen:
         "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.lenovo.com%2Far%2Fes%2Fp%2FLEN101B0008&psig=AOvVaw1OaYIrKj-UVwwWhbFvGWKl&ust=1679411019492000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCLqN_j6v0CFQAAAAAdAAAAABAF",
       precio: 95000,
@@ -75,7 +75,7 @@ const ItemListContainer = ({ greeting }) => {
       }, 2000);
     });
   };
-  getDatos().then((datos) => console.log(datos));
+  getDatos().then((dato) => console.log(dato));
 
   async function fetchingData() {
     try {

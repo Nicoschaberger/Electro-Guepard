@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 const CartWidget = () => {
   return (
     <>
-    <p>
+    <button className='carro'>
       
-      <span className="material-symbols-outlined"> shopping_cart </span> 5 
+      <span className="material-symbols-outlined"> shopping_cart</span> 1 
       
-    </p>
+    </button>
     </>
   )
 }
