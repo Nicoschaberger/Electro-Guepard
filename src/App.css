@@ -12,14 +12,9 @@
   width: 35%;
 }
 
-.carta{
-  display: flex;
-  flex-direction: row;
-}
 
-.main{
-  margin-right: 20%;
-}
+
+
 
 .name{
   text-align: center;
