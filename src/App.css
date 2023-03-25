@@ -6,15 +6,15 @@
   box-sizing: border-box;
 }
 
-#logo{
+.logo{
   border: 1px solid black;
   border-radius: 90%;
   width: 35%;
 }
 
-
-
-
+.main{
+  margin-right: 18%;
+}
 
 .name{
   text-align: center;
@@ -24,6 +24,11 @@
   text-align: center;
 }
 
-.card{
-  display: block
+.carta{
+  display: flex;
+  justify-content: center; 
+}
+
+.imagenes{
+  width: 90%;
 }

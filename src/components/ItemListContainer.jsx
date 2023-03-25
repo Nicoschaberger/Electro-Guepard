@@ -32,12 +32,12 @@ const ItemListContainer = ({ greeting }) => {
 
   return (
     <>
-      <Center h="100px">
+      <Center>
         <h1>
           <strong>{greeting}</strong>
         </h1>
-        <ItemList datos={datos}/>
       </Center>
+        <ItemList datos={datos}/>
     
     </>
   );

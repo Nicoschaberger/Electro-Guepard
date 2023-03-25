@@ -7,7 +7,7 @@ const Cart = () => {
   return (
     <>
     <ItemCount/>
-    <Stack spacing={4}>
+    <Stack spacing={4} className='formulario'>
       <InputGroup>
         <InputLeftAddon children='+234' />
         <Input type='tel' placeholder='phone number' />

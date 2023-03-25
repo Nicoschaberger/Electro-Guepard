@@ -8,7 +8,7 @@ const ItemDetailContainer = () => {
   const [item, setItem] = useState({})
   const getDatos = () => {
     return new Promise((resolve, reject) => {
-      if (datos.length === 0) {
+      if (products.length === 0) {
         reject(new Error("No hay datos"));
       }
       setTimeout(() => {
@@ -25,7 +25,7 @@ const ItemDetailContainer = () => {
   
   return (
     <div>
-        <ItemDatail nombre={item.nombre} descripcion={item.descripcion} precio={item.precio} stock={item.stock} id={item.id}/>
+        <ItemDatail nombre={item.nombre} categoria={item.categoria} descripcion={item.descripcion} precio={item.precio} stock={item.stock} id={item.id} imagen={item.imagen}/>
     </div>
   )
 }

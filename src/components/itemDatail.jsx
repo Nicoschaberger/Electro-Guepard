@@ -1,17 +1,19 @@
 import React from 'react'
-import { Card, CardHeader, CardBody, CardFooter, Button, Stack } from '@chakra-ui/react'
+import { Card, CardHeader, Text, Heading, ButtonGroup, Divider, CardBody, CardFooter, Button, Stack, Image } from '@chakra-ui/react'
 import ItemCount from './ItemCount'
-import { useParams } from 'react-router-dom'
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
-const ItemDatail = (nombre, descripcion, precio, stock, datos) => {   
+const ItemDatail = ({nombre, descripcion, precio, stock, imagen, categoria}) => {   
 
   return (
-    <>
+    <div className='carta'>
         <Card maxW='sm'>
         <CardBody>
+            <Image className='imagenes'
+            src={imagen}
+            borderRadius='lg'
+            />
             <Stack mt='6' spacing='3'>
                 <Heading size='md'>{nombre}</Heading>
                 <Text> Descripcion: {descripcion} </Text>
@@ -23,13 +25,13 @@ const ItemDatail = (nombre, descripcion, precio, stock, datos) => {
         <CardFooter>
             <ButtonGroup spacing='2'>
                 <Link to="/Cart">
-                <Button variant='solid' colorScheme='blue'> Agregar al carrito </Button>
-                <ItemCount/>
+                <Button variant='solid' colorScheme='blue'> Agregar al carrito </Button> 
                 </Link>
+                <ItemCount/>
             </ButtonGroup>
         </CardFooter>
         </Card>
-    </>
+    </div>
     )}
 
 
