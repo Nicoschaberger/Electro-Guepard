@@ -34,6 +34,7 @@
 .imagenes{
   width: 90%;
 }
+
 .carta{
   display:flex;
   justify-content:space-around;
@@ -59,4 +60,19 @@
 .count{
   display: flex;
   justify-content: center;
+}
+
+.car{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.compra{
+  margin: auto;
+}
+
+.nombre{
+  text-align: center;
 }

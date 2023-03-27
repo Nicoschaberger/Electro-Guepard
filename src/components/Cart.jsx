@@ -1,13 +1,13 @@
 import React from 'react'
 import ItemCount from './ItemCount'
 import { Input, Stack, InputGroup, InputLeftAddon, InputRightAddon, Button } from '@chakra-ui/react'
-import ItemDetailContainer from './ItemDetailContainer'
+import ItemDatail from './ItemDatail'
 
 
 const Cart = () => {
   return (
     <>
-    <ItemDetailContainer/>
+    <ItemDatail />
     <ItemCount/>
     <Stack spacing={4} className='formulario'>
       <InputGroup>

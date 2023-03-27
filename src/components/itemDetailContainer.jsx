@@ -2,6 +2,7 @@ import ItemDatail from "./ItemDatail"
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 import products from '../Data.json'
+import Cart from "./Cart";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
