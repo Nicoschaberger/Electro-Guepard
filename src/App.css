@@ -20,15 +20,43 @@
   text-align: center;
 }
 
-.button{
-  text-align: center;
+.botones{
+  margin: auto;
 }
 
 .carta{
   display: flex;
-  justify-content: center; 
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; 
 }
 
 .imagenes{
   width: 90%;
+}
+.carta{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.formulario{
+  margin: auto;
+  padding: 10px;
+  width: 50%;
+}
+
+.submit{
+  margin: auto;
+}
+
+.contador{
+  display: flex;
+  justify-content: center
+}
+
+.count{
+  display: flex;
+  justify-content: center;
 }

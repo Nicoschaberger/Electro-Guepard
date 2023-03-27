@@ -1,11 +1,13 @@
 import React from 'react'
 import ItemCount from './ItemCount'
-import { Input, Stack, InputGroup, InputLeftAddon, InputRightAddon } from '@chakra-ui/react'
+import { Input, Stack, InputGroup, InputLeftAddon, InputRightAddon, Button } from '@chakra-ui/react'
+import ItemDetailContainer from './ItemDetailContainer'
 
 
 const Cart = () => {
   return (
     <>
+    <ItemDetailContainer/>
     <ItemCount/>
     <Stack spacing={4} className='formulario'>
       <InputGroup>
@@ -17,6 +19,10 @@ const Cart = () => {
         <Input placeholder='mysite' />
         <InputRightAddon children='.com' />
       </InputGroup>
+      <InputGroup size='sm'>
+      <Button type="submit" className='submit' colorScheme='blue'>Enviar</Button>
+      </InputGroup>
+      
     </Stack>
     </>
   )

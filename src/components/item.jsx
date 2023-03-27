@@ -7,7 +7,7 @@ const item = ({id, imagen, nombre, descripcion, precio, stock, categoria}) => {
     <>
     <div key={id}  className='carta'>
     <Card maxW='sm'>
-        <CardBody>
+        <CardBody >
         <Image className='imagenes'
             src={imagen}
             borderRadius='lg'

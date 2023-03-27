@@ -8,7 +8,7 @@ const ItemCount = () => {
         alert = "no se pueden ingresar cantidades negativas";
       }
       {
-        setCounter(Contador - 1);
+        setContador(Contador - 1);
       }
     };
     const onAdd = () => {
@@ -16,11 +16,15 @@ const ItemCount = () => {
     };
 
   return (
-    <>
-      <button onClick={() => setContador(Contador + 1)}> + </button><h5>{Contador}</h5><button onClick={restar}> - </button><br />
+    <div className="count">
+    <div className="contador">
+      <button onClick={() => setContador(Contador + 1)}> + </button>
+      <h5>{Contador}</h5>
+      <button onClick={restar}> - </button><br />
+    </div>
       <button onClick={onAdd}>Agregar al carrito</button>
       <button onClick={() => setContador(0)}>Borrar</button> 
-    </>
+    </div>
   );
 };
 

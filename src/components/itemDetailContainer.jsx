@@ -20,8 +20,6 @@ const ItemDetailContainer = () => {
     getDatos()
     .then((res)=> setItem(res.find((prod)=> prod.id === parseInt(id))))
   },[id])
-
-
   
   return (
     <div>
