@@ -18,7 +18,7 @@ const ItemCount = () => {
   return (
     <>
       <button onClick={() => setContador(Contador + 1)}> + </button><h5>{Contador}</h5><button onClick={restar}> - </button><br />
-      <button onClick={onAdd}>Agregar al carrito</button> <space/>
+      <button onClick={onAdd}>Agregar al carrito</button>
       <button onClick={() => setContador(0)}>Borrar</button> 
     </>
   );

@@ -4,7 +4,7 @@ import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom'
 
 
-const ItemDatail = ({nombre, descripcion, precio, stock, imagen, categoria}) => {   
+const ItemDatail = ( {nombre, descripcion, precio, stock, imagen, categoria} ) => {   
 
   return (
     <div className='carta'>

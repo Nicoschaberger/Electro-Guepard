@@ -3,7 +3,7 @@
         "id": 1,
         "nombre": "Microondas",
         "imagen": "../img/microondas.png",
-        "precio":2000,
+        "precio": 20000,
         "descripcion": "Para cocineros express o amantes del arte del buen comer, un microondas es un aliado indiscutible de la cocina. Ahorrá tiempo, llevá los alimentos a su punto de cocción o volvé a deleitarte con los sabores de los platos que ya preparaste.",
         "stock": 20,
         "categoria": "Cocina"
