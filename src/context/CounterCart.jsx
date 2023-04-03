@@ -2,7 +2,7 @@ import { createContext, useState } from 'react'
 
 export const CounterContext = createContext();
 
-const CartContext = ({children}) => {
+const CounterCart = ({children}) => {
   
   const [counter, setCounter ]= useState(0);
 
@@ -26,4 +26,4 @@ const CartContext = ({children}) => {
     );
 };
 
-export default CartContext
+export default CounterCart;
