@@ -1,29 +1,20 @@
-import React from "react";
-import { useState } from "react";
+import { useContext } from 'react';
+import { CounterContext } from '../context/CartContext';
+import { Button, ButtonGroup } from '@chakra-ui/react'
+
+
 
 const ItemCount = () => {
-  const [Contador, setContador] = useState(0); 
-    const restar = () => {
-      if (Contador < 1) {
-        alert = "no se pueden ingresar cantidades negativas";
-      }
-      {
-        setContador(Contador - 1);
-      }
-    };
-    const onAdd = () => {
-      console.log("agregar al carrito");
-    };
+
+  const {counter, increment, decrement, reset} = useContext(CounterContext);
 
   return (
-    <div className="count">
-    <div className="contador">
-      <button onClick={() => setContador(Contador + 1)}> + </button>
-      <h5>{Contador}</h5>
-      <button onClick={restar}> - </button><br />
-    </div>
-      <button onClick={onAdd}>Agregar al carrito</button>
-      <button onClick={() => setContador(0)}>Borrar</button> 
+    <div className="count">      
+        <Button colorScheme='blue' className="im" onClick={() => increment()}> + </Button>
+        <Button className="im">{counter}</Button>
+        <Button colorScheme='blue' className="im" onClick={() => decrement()}> - </Button>
+        
+        <Button colorScheme='blue' className="im" onClick={() => reset()}>Borrar</Button>
     </div>
   );
 };

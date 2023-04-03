@@ -2,7 +2,6 @@ import ItemDatail from "./ItemDatail"
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 import products from '../Data.json'
-import Cart from "./Cart";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -18,8 +17,7 @@ const ItemDetailContainer = () => {
     });
   };
   useEffect(() => {
-    getDatos()
-    .then((res)=> setItem(res.find((prod)=> prod.id === parseInt(id))))
+    getDatos().then((res)=> setItem(res.find((prod)=> prod.id === parseInt(id))))
   },[id])
   
   return (

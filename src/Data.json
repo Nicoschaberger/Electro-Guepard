@@ -21,7 +21,7 @@
         "id": 3,
         "nombre": "Cortadora de pasto",
         "imagen":"../img/cortadoraCesped.png",
-        "pecio": 82000,
+        "precio": 82000,
         "descripcion": "La cortadora de césped Black & Decker GR1000 cuenta con un potente motor universal de 1200 watts, liviano y fácil de utilizar. Además, posee una empuñadora cómoda que permite su transporte y almacenaje de manera sencilla.",
         "stock": 35,
         "categoria": "Home"
@@ -30,7 +30,7 @@
         "id": 4,
         "nombre": "Laptop",
         "imagen":"../img/laptop.png",
-        "pecio": 95000,
+        "precio": 95000,
         "descripcion": "La laptop ThinkBook 16 de 4ta generación te ofrece el máximo. Más potencia gracias a su procesador Intel® Core™ de 12va generación. Ahora también con más espacio: la pantalla de 16' es la más grande de la línea ThinkBook, con su resolución de hasta 2,5 K y opciones gráficas avanzadas. La conectividad inalámbrica se actualiza desde versiones anteriores; además, los nuevos sensores y funciones inteligentes contribuyen a tu productividad y protegen los datos de tu negocio.",
         "stock": 16,
         "categoria": "Informatica"
@@ -40,7 +40,7 @@
         "id": 5,
         "nombre": "Parlante",
         "imagen":"../img/parlante.png",
-        "pecio": 20000,
+        "precio": 20000,
         "descripcion": "El equipo de audio Philco DJP61 cuenta con display digital, efectos de iluminación y botonera de efectos DJ. Sus dimensiones son: 260 mm x 530 mm x 215 mm, mientras que su peso es de 3,59 Kg.",
         "stock": 25,
         "categoria": "Musica"

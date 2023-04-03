@@ -5,12 +5,14 @@ import ItemDetailContainer from "./components/ItemDetailContainer"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Cart from "./components/Cart"
 import './App.css'
+import StateComponent from "./context/CartContext"
 
 
 
 
 const App = () => {
   return (
+    <StateComponent>
     <BrowserRouter>
     <ChakraProvider>
       
@@ -27,6 +29,7 @@ const App = () => {
 
     </ChakraProvider>
     </BrowserRouter>
+    </StateComponent>
   )
 }
 
