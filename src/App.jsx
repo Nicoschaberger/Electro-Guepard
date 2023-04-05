@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Cart from "./components/Cart"
 import './App.css'
 import ShoppingCartProvider from "./context/ShoppingCartProvider"
+import CartWidget from "./components/CartWidget"
 
 
 
@@ -13,6 +14,7 @@ import ShoppingCartProvider from "./context/ShoppingCartProvider"
 const App = () => {
   return (
     <>
+    <ShoppingCartProvider>
     <BrowserRouter>
     <ChakraProvider>
       
@@ -28,12 +30,11 @@ const App = () => {
       
       </Routes>
 
-      <ShoppingCartProvider>
-        <Cart/>
-      </ShoppingCartProvider>
+        
 
     </ChakraProvider>
     </BrowserRouter>
+    </ShoppingCartProvider>
     </>
 
   )
