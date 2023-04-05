@@ -1,11 +1,16 @@
 import React from 'react'
 import { Card, CardHeader, Text, Heading, ButtonGroup, Divider, CardBody, CardFooter, Button, Stack, Image } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
+import ShoppingCartProvider from '../context/ShoppingCartProvider'
+import CounterCart from '../context/CounterCart'
 
 
 const ItemDatail = ( {nombre, descripcion, precio, stock, imagen, categoria} ) => {   
 
   return (
+    <>
+    <CounterCart>
+    <ShoppingCartProvider>
     <div className='car'>
         <Card maxW='sm'>
         <CardBody>
@@ -30,6 +35,9 @@ const ItemDatail = ( {nombre, descripcion, precio, stock, imagen, categoria} ) =
         </CardFooter>
         </Card>
     </div>
+    </ShoppingCartProvider>
+    </CounterCart>
+    </>
     )}
 
 

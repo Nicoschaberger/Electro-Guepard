@@ -3,8 +3,6 @@ import {CounterContext} from '../context/CounterCart';
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import { CartContext } from '../context/ShoppingCartProvider';
 
-
-
 const ItemCount = () => {
   const [ cart, setCart ] = useContext(CartContext); 
   const {counter, increment, decrement, reset} = useContext(CounterContext);

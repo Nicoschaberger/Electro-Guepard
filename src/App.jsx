@@ -14,7 +14,6 @@ import CartWidget from "./components/CartWidget"
 const App = () => {
   return (
     <>
-    <ShoppingCartProvider>
     <BrowserRouter>
     <ChakraProvider>
       
@@ -34,7 +33,6 @@ const App = () => {
 
     </ChakraProvider>
     </BrowserRouter>
-    </ShoppingCartProvider>
     </>
 
   )
