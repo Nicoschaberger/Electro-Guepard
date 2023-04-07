@@ -4,8 +4,10 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import products from '../Data.json'
 import { useEffect } from "react";
+import Loading from "./Loading";
 
 const ItemListContainer = ({ greeting }) => {
+  const [loading, setLoading] = useState(true);
   const [datos, setDatos] = useState([]);
   const { categoria } = useParams();
 
@@ -13,10 +15,11 @@ const ItemListContainer = ({ greeting }) => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(products);
+        setLoading(false);
       }, 2000);
     });
   };
- 
+  
   useEffect(()=>{
     getDatos()
     .then((res)=> {
@@ -27,6 +30,10 @@ const ItemListContainer = ({ greeting }) => {
       }
     })
   },[categoria])
+  
+  if(loading) { 
+    return <Loading/>
+  }
 
 
 

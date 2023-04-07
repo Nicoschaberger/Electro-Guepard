@@ -65,10 +65,10 @@
 }
 
 .car{
-  display:flex;
-  justify-content:space-around;
-  align-items:center;
-  flex-wrap:wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .compra{
@@ -77,4 +77,8 @@
 
 .nombre{
   text-align: center;
+}
+
+.compra{
+  margin: 3%;
 }
