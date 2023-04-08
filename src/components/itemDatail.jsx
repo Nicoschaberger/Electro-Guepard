@@ -1,28 +1,27 @@
-import { useContext } from 'react'
 import { Card, CardHeader, Text, Heading, ButtonGroup, Divider, CardBody, CardFooter, Button, Stack, Image } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
-import { CounterContext } from '../context/CounterCart'
 
 
-const ItemDatail = ( {nombre, descripcion, precio, stock, imagen, counter} ) => {   
 
-    const { counter, increment, decrement, reset } = useContext(CounterContext);
+const ItemDatail = ( {nombre, descripcion, precio, stock, imagen, counter, decrement, increment, reset} ) => {
 
-    const addToCart = () => {
-        setCart((currItems) => {
-          const itemFound = currItems.find((item) => item.id === id);
-          if(itemFound){
-            return currItems.map((item) => {
-              if (item.id === id){
-                return {...item, quantity: item.quantity + counter};
-              } else {
-                return item;
-              }
-            });
+  const addToCart = () => {
+    setCart((currItems) => {
+      const itemFound = currItems.find((item) => item.id === id);
+      if(itemFound){
+        return currItems.map((item) => {
+          if (item.id === id){
+            return {...item, quantity: item.quantity + counter};
+          } else {
+            return item;
           }
         });
-      };
-
+      } else {
+        return [...currItems, {id, quantity, counter, precio, nombre}];
+      }
+    });
+  };
+      
 
   return (
     <>
@@ -43,10 +42,10 @@ const ItemDatail = ( {nombre, descripcion, precio, stock, imagen, counter} ) => 
     <Divider />
         <CardFooter>
             <ButtonGroup className='compra' spacing='2'>
-                <Button colorScheme='blue' className="im" onClick={() => increment()}> + </Button>
-                <h3 onClick = {() => addToCart()} colorScheme='blue' className='im'>{counter}</h3>
-                <Button colorScheme='blue' className="im" onClick={() => decrement()}> - </Button>        
-                <Button colorScheme='blue' className="im" onClick={() => reset()}>Borrar</Button> 
+                <Button colorScheme='blue' className="im" onClick={() => {increment}}> + </Button>
+                <Button onClick = {() => addToCart()} colorScheme='blue' className='im'>{counter}</Button>
+                <Button colorScheme='blue' className="im" onClick={() => {decrement}}> - </Button>        
+                <Button colorScheme='blue' className="im" onClick={() => {reset}}>Borrar</Button> 
                 <Link to="/Cart">
                 <Button variant='solid' colorScheme='blue' className='compra'> Agregar </Button>
                 </Link>
@@ -54,6 +53,7 @@ const ItemDatail = ( {nombre, descripcion, precio, stock, imagen, counter} ) => 
         </CardFooter>
         </Card>
     </div>
+
     </>
     )}
 

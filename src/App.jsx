@@ -5,8 +5,6 @@ import ItemDetailContainer from "./components/ItemDetailContainer"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Cart from "./components/Cart"
 import './App.css'
-import ShoppingCartProvider from "./context/ShoppingCartProvider"
-import CartWidget from "./components/CartWidget"
 
 
 
