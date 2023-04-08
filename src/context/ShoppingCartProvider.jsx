@@ -33,8 +33,10 @@ const ShoppingCartProvider = ( {children} ) => {
     return acc + curr.quantity;
   }, 0);
 
+
+
   return (
-    <CartContext.Provider value={{cart, setCart}}>
+    <CartContext.Provider value={{cart, quantity}}>
       {children}
     </CartContext.Provider>
   );

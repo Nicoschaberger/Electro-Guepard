@@ -1,10 +1,27 @@
-import React from 'react'
+import { useContext } from 'react'
 import { Card, CardHeader, Text, Heading, ButtonGroup, Divider, CardBody, CardFooter, Button, Stack, Image } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import { CounterContext } from '../context/CounterCart'
 
 
-const ItemDatail = ( {nombre, descripcion, precio, stock, imagen, counter, increment, decrement, reset} ) => {   
+const ItemDatail = ( {nombre, descripcion, precio, stock, imagen, counter} ) => {   
+
+    const { counter, increment, decrement, reset } = useContext(CounterContext);
+
+    const addToCart = () => {
+        setCart((currItems) => {
+          const itemFound = currItems.find((item) => item.id === id);
+          if(itemFound){
+            return currItems.map((item) => {
+              if (item.id === id){
+                return {...item, quantity: item.quantity + counter};
+              } else {
+                return item;
+              }
+            });
+          }
+        });
+      };
 
 
   return (
@@ -27,7 +44,7 @@ const ItemDatail = ( {nombre, descripcion, precio, stock, imagen, counter, incre
         <CardFooter>
             <ButtonGroup className='compra' spacing='2'>
                 <Button colorScheme='blue' className="im" onClick={() => increment()}> + </Button>
-                <Button onClick = {() => addToCart()} colorScheme='blue' className='im'>{counter}</Button>
+                <h3 onClick = {() => addToCart()} colorScheme='blue' className='im'>{counter}</h3>
                 <Button colorScheme='blue' className="im" onClick={() => decrement()}> - </Button>        
                 <Button colorScheme='blue' className="im" onClick={() => reset()}>Borrar</Button> 
                 <Link to="/Cart">
