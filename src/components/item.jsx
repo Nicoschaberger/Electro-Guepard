@@ -2,7 +2,7 @@ import { Card, CardHeader, Image, CardBody, CardFooter, Button, Stack, Heading, 
 import { Link } from 'react-router-dom';
 
 
-const item = ({id, imagen, nombre, descripcion, precio, stock, categoria}) => {
+const item = ({id, imagen, nombre}) => {
   return (
     <>
     <div key={id}  className='carta'>

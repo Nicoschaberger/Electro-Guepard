@@ -5,6 +5,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Cart from "./components/Cart"
 import './App.css'
+import { ShoppingCartProvider } from "./context/ShoppingCartProvider"
 
 
 
@@ -12,6 +13,7 @@ import './App.css'
 const App = () => {
   return (
     <>
+    <ShoppingCartProvider>
     <BrowserRouter>
     <ChakraProvider>
       
@@ -31,12 +33,14 @@ const App = () => {
 
     </ChakraProvider>
     </BrowserRouter>
+    </ShoppingCartProvider>
+    
     </>
 
   )
 }
 
-export default App
+export default App
 
 
 

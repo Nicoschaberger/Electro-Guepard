@@ -1,7 +1,7 @@
-import ItemDatail from './ItemDatail'
+import { Card, CardHeader, Text, Heading, ButtonGroup, Divider, CardBody, CardFooter, Button, Stack, Image } from '@chakra-ui/react'
 import { useState } from 'react'
 
-const ItemCount = () => {
+const ItemCount = ({addToCart}) => {
 
   const [counter, setCounter ]= useState(0);
 
@@ -17,15 +17,23 @@ const ItemCount = () => {
     setCounter(0);
   };
   
-  console.log(counter);
+ 
   
   return (
     <> 
           
-      <ItemDatail increment={increment} decrement={decrement} reset={reset} counter={counter}/>
+          <ButtonGroup className='compra' spacing='2'>
+                <Button colorScheme='blue' className="im" onClick={increment}> + </Button>
+                <Button onClick = {() => addToCart()} colorScheme='blue' className='im'>{counter}</Button>
+                <Button colorScheme='blue' className="im" onClick={decrement}> - </Button>        
+                <Button colorScheme='blue' className="im" onClick={reset}>Borrar</Button> 
+                
+                <Button variant='solid' colorScheme='blue'  onClick={()=>addToCart(counter)}> Agregar </Button>
+               
+            </ButtonGroup>
       
     </>
   );
 };
 
-export default ItemCount;
+export default ItemCount;

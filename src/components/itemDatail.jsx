@@ -1,23 +1,29 @@
 import { Card, CardHeader, Text, Heading, ButtonGroup, Divider, CardBody, CardFooter, Button, Stack, Image } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
+import { useContext, useState } from 'react'
+import ItemCount from './ItemCount'
+import { CartContext } from '../context/ShoppingCartProvider'
 
+const ItemDatail = ( {nombre, descripcion, precio, stock, imagen, id} ) => {
 
+  const{ setCart } = useContext(CartContext)
 
-const ItemDatail = ( {nombre, descripcion, precio, stock, imagen, counter, decrement, increment, reset} ) => {
+  const [purchase, setPurchase] = useState(false)
 
-  const addToCart = () => {
+  const addToCart = (counter) => {
+    setPurchase(true)
     setCart((currItems) => {
       const itemFound = currItems.find((item) => item.id === id);
       if(itemFound){
         return currItems.map((item) => {
           if (item.id === id){
-            return {...item, quantity: item.quantity + counter};
+            return {...item, counter: item.counter + counter};
           } else {
             return item;
           }
         });
       } else {
-        return [...currItems, {id, quantity, counter, precio, nombre}];
+        return [...currItems, {id, counter,  precio, nombre}];
       }
     });
   };
@@ -41,15 +47,11 @@ const ItemDatail = ( {nombre, descripcion, precio, stock, imagen, counter, decre
         </CardBody>
     <Divider />
         <CardFooter>
-            <ButtonGroup className='compra' spacing='2'>
-                <Button colorScheme='blue' className="im" onClick={() => {increment}}> + </Button>
-                <Button onClick = {() => addToCart()} colorScheme='blue' className='im'>{counter}</Button>
-                <Button colorScheme='blue' className="im" onClick={() => {decrement}}> - </Button>        
-                <Button colorScheme='blue' className="im" onClick={() => {reset}}>Borrar</Button> 
-                <Link to="/Cart">
-                <Button variant='solid' colorScheme='blue' className='compra'> Agregar </Button>
-                </Link>
-            </ButtonGroup>
+           { purchase 
+           ? <Link to='/Cart'>
+            <Button variant='solid' colorScheme='blue'>Ir al carrito</Button>
+            </Link>
+           :<ItemCount addToCart={addToCart}/>}
         </CardFooter>
         </Card>
     </div>

@@ -1,6 +1,4 @@
 import { createContext, useState } from 'react'
-import ItemDatail from '../components/ItemDatail';
-import ItemCount from '../components/ItemCount';
 
 export const CartContext = createContext();
 
