@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import Form from './Form'
 import { CartContext } from '../context/ShoppingCartProvider'
+import { Link } from 'react-router-dom';
 import { Table,
   Thead,
   Tbody,
@@ -74,7 +75,9 @@ return (
           
           <Button variant="outline-danger" onClick={() => clearCart()} >Comprar</Button>
           <Button variant="outline-danger" onClick={() => clearCart()} >Vaciar Carrito</Button>
+          <Link to={"/"}>
           <Button variant="outline-primary" size="lg">Volver al Catalogo</Button>
+          </Link>
         </Center>
       <Form/>
   </>
