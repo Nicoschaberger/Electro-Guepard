@@ -46,7 +46,7 @@ const ItemDatail = ( {nombre, descripcion, precio, stock, imagen, id} ) => {
             </Stack>
         </CardBody>
     <Divider />
-        <CardFooter>
+        <CardFooter className='op'>
            { purchase 
            ? <Link to='/Cart'>
             <Button variant='solid' colorScheme='blue'>Ir al carrito</Button>

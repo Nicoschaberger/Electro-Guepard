@@ -26,9 +26,8 @@ const ItemCount = ({addToCart}) => {
                 <Button colorScheme='blue' className="im" onClick={increment}> + </Button>
                 <Button onClick = {() => addToCart()} colorScheme='blue' className='im'>{counter}</Button>
                 <Button colorScheme='blue' className="im" onClick={decrement}> - </Button>        
-                <Button colorScheme='blue' className="im" onClick={reset}>Borrar</Button> 
-                
-                <Button variant='solid' colorScheme='blue'  onClick={()=>addToCart(counter)}> Agregar </Button>
+                <Button colorScheme='blue' className="im" onClick={reset}>Borrar</Button>                 
+                <Button variant='solid' className="im" colorScheme='blue' onClick={()=>addToCart(counter)}> Agregar </Button>
                
             </ButtonGroup>
       
